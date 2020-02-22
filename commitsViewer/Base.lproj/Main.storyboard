@@ -2,24 +2,24 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jIy-Hz-Nis">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Display Commits Table View Controller-->
         <scene sceneID="1CL-g8-4gi">
             <objects>
-                <tableViewController id="jIy-Hz-Nis" customClass="TableViewController" customModule="commitsViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jIy-Hz-Nis" customClass="DisplayCommitsTableViewController" customModule="commitsViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Huc-bb-weh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="individualCommitCell" rowHeight="208" id="HMk-cf-xKT" customClass="IndividualCommitTableViewCell" customModule="commitsViewer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="208"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="individualCommitCell" rowHeight="126" id="HMk-cf-xKT" customClass="IndividualCommitTableViewCell" customModule="commitsViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HMk-cf-xKT" id="xuj-yU-Zag">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKP-od-zVG">
@@ -63,10 +63,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="commitMessage" destination="4qi-cf-n3p" id="Bou-Xa-wy3"/>
-                                    <outlet property="commitNumber" destination="CGd-nC-4Ja" id="S9W-wm-o46"/>
+                                    <outlet property="commitMessageLabel" destination="4qi-cf-n3p" id="Bou-Xa-wy3"/>
+                                    <outlet property="commitNumberLabel" destination="CGd-nC-4Ja" id="S9W-wm-o46"/>
                                     <outlet property="imageView" destination="cNx-D2-bIz" id="Kmm-QN-aVd"/>
-                                    <outlet property="userName" destination="cKP-od-zVG" id="iLg-po-c0S"/>
+                                    <outlet property="userNameLabel" destination="cKP-od-zVG" id="iLg-po-c0S"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -9,17 +9,21 @@
 import UIKit
 
 class IndividualCommitTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var imageAvatar: UIImageView!
     
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
     
-    @IBOutlet weak var commitNumber: UILabel!
+    @IBOutlet weak var commitNumberLabel: UILabel!
     
-    @IBOutlet weak var commitMessage: UILabel!
+    @IBOutlet weak var commitMessageLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        imageAvatar.layer.cornerRadius = 25
+        commitNumberLabel.lineBreakMode = .byCharWrapping
+        commitMessageLabel.lineBreakMode = .byTruncatingTail
     }
-
+    
 }
