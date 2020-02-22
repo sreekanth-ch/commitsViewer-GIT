@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jIy-Hz-Nis">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Table View Controller-->
+        <scene sceneID="1CL-g8-4gi">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="jIy-Hz-Nis" customClass="TableViewController" customModule="commitsViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Huc-bb-weh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="individualCommitCell" rowHeight="208" id="HMk-cf-xKT" customClass="IndividualCommitTableViewCell" customModule="commitsViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="208"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HMk-cf-xKT" id="xuj-yU-Zag">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKP-od-zVG">
+                                            <rect key="frame" x="95" y="16" width="289" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CommitID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGd-nC-4Ja">
+                                            <rect key="frame" x="95" y="41.5" width="289" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNx-D2-bIz">
+                                            <rect key="frame" x="35" y="26" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="Rcr-1T-uu1"/>
+                                                <constraint firstAttribute="height" constant="50" id="idt-1m-ujl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CommitMessage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qi-cf-n3p">
+                                            <rect key="frame" x="93" y="70" width="129" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CGd-nC-4Ja" firstAttribute="top" secondItem="cKP-od-zVG" secondAttribute="bottom" constant="5" id="3t6-nU-2Gb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4qi-cf-n3p" secondAttribute="trailing" constant="172" id="ASD-Ce-HzE"/>
+                                        <constraint firstItem="cNx-D2-bIz" firstAttribute="top" secondItem="xuj-yU-Zag" secondAttribute="topMargin" constant="15" id="CgA-5d-UYo"/>
+                                        <constraint firstItem="4qi-cf-n3p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xuj-yU-Zag" secondAttribute="leadingMargin" id="II8-mc-Izb"/>
+                                        <constraint firstItem="4qi-cf-n3p" firstAttribute="top" secondItem="CGd-nC-4Ja" secondAttribute="bottom" constant="8" id="JiF-cP-FGQ"/>
+                                        <constraint firstItem="cKP-od-zVG" firstAttribute="leading" secondItem="cNx-D2-bIz" secondAttribute="trailing" constant="10" id="P29-9D-axH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CGd-nC-4Ja" secondAttribute="trailing" constant="10" id="PyZ-n0-opE"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cKP-od-zVG" secondAttribute="trailing" constant="10" id="WMz-NF-bSQ"/>
+                                        <constraint firstItem="cNx-D2-bIz" firstAttribute="leading" secondItem="xuj-yU-Zag" secondAttribute="leadingMargin" constant="15" id="a0M-fB-DzZ"/>
+                                        <constraint firstItem="CGd-nC-4Ja" firstAttribute="leading" secondItem="cNx-D2-bIz" secondAttribute="trailing" constant="10" id="bTq-jY-HaV"/>
+                                        <constraint firstItem="cKP-od-zVG" firstAttribute="top" secondItem="xuj-yU-Zag" secondAttribute="topMargin" constant="5" id="hQZ-iq-ugq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commitMessage" destination="4qi-cf-n3p" id="Bou-Xa-wy3"/>
+                                    <outlet property="commitNumber" destination="CGd-nC-4Ja" id="S9W-wm-o46"/>
+                                    <outlet property="imageView" destination="cNx-D2-bIz" id="Kmm-QN-aVd"/>
+                                    <outlet property="userName" destination="cKP-od-zVG" id="iLg-po-c0S"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jIy-Hz-Nis" id="3ha-4X-l9W"/>
+                            <outlet property="delegate" destination="jIy-Hz-Nis" id="6R7-Ns-aRT"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgl-1P-u86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
         </scene>
     </scenes>
 </document>

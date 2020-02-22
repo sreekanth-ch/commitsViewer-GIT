@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		5ECAE38B2401BA12007E0753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAE38A2401BA12007E0753 /* AppDelegate.swift */; };
 		5ECAE38D2401BA12007E0753 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAE38C2401BA12007E0753 /* SceneDelegate.swift */; };
-		5ECAE38F2401BA12007E0753 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAE38E2401BA12007E0753 /* ViewController.swift */; };
 		5ECAE3922401BA12007E0753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECAE3902401BA12007E0753 /* Main.storyboard */; };
 		5ECAE3942401BA15007E0753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECAE3932401BA15007E0753 /* Assets.xcassets */; };
 		5ECAE3972401BA15007E0753 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECAE3952401BA15007E0753 /* LaunchScreen.storyboard */; };
 		5ECAE3A22401BA15007E0753 /* commitsViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAE3A12401BA15007E0753 /* commitsViewerTests.swift */; };
 		5ECAE3AD2401BA15007E0753 /* commitsViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAE3AC2401BA15007E0753 /* commitsViewerUITests.swift */; };
+		5ECAE3BB2401C8FE007E0753 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAE3BA2401C8FE007E0753 /* TableViewController.swift */; };
+		5ECAE3BD2401CAEC007E0753 /* IndividualCommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAE3BC2401CAEC007E0753 /* IndividualCommitTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		5ECAE3872401BA12007E0753 /* commitsViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commitsViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECAE38A2401BA12007E0753 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECAE38C2401BA12007E0753 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5ECAE38E2401BA12007E0753 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5ECAE3912401BA12007E0753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5ECAE3932401BA15007E0753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5ECAE3962401BA15007E0753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		5ECAE3A82401BA15007E0753 /* commitsViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = commitsViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECAE3AC2401BA15007E0753 /* commitsViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commitsViewerUITests.swift; sourceTree = "<group>"; };
 		5ECAE3AE2401BA15007E0753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ECAE3BA2401C8FE007E0753 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5ECAE3BC2401CAEC007E0753 /* IndividualCommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualCommitTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				5ECAE38A2401BA12007E0753 /* AppDelegate.swift */,
 				5ECAE38C2401BA12007E0753 /* SceneDelegate.swift */,
-				5ECAE38E2401BA12007E0753 /* ViewController.swift */,
 				5ECAE3902401BA12007E0753 /* Main.storyboard */,
 				5ECAE3932401BA15007E0753 /* Assets.xcassets */,
 				5ECAE3952401BA15007E0753 /* LaunchScreen.storyboard */,
 				5ECAE3982401BA15007E0753 /* Info.plist */,
+				5ECAE3BA2401C8FE007E0753 /* TableViewController.swift */,
+				5ECAE3BC2401CAEC007E0753 /* IndividualCommitTableViewCell.swift */,
 			);
 			path = commitsViewer;
 			sourceTree = "<group>";
@@ -259,9 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ECAE38F2401BA12007E0753 /* ViewController.swift in Sources */,
 				5ECAE38B2401BA12007E0753 /* AppDelegate.swift in Sources */,
+				5ECAE3BB2401C8FE007E0753 /* TableViewController.swift in Sources */,
 				5ECAE38D2401BA12007E0753 /* SceneDelegate.swift in Sources */,
+				5ECAE3BD2401CAEC007E0753 /* IndividualCommitTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
