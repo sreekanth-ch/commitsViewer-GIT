@@ -11,14 +11,12 @@ import UIKit
 
 class ServiceRequest: DisplayCommitsTableViewController {
     
-    var displayInstance = DisplayCommitsTableViewController()
-    
     public func fetchCommits(data: Data?, urlResponse: URLResponse?, error: Error?) -> Void {
         
         // List of commits from all available branches on the repo
         var commitsList: [[String: Any]]!
         
-        do{
+        do {
             try commitsList = JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [[String: Any]]
             
             if commitsList != nil {
@@ -49,12 +47,7 @@ class ServiceRequest: DisplayCommitsTableViewController {
                     newCommit.userName = name
                     newCommit.userAvatar = image
                     
-                    displayInstance.gitCommits.append(newCommit)
-                }
-                DispatchQueue.main.async {
-                    print("Entered Dispacth")
-                    self.displayInstance.viewDidAppear(true)
-                    self.displayInstance.removeSpinner()
+                    DisplayCommitsTableViewController.gitCommits.append(newCommit)
                 }
                 
             } else {
@@ -64,6 +57,8 @@ class ServiceRequest: DisplayCommitsTableViewController {
         catch {
             print(error)
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "receivedCommitsData"), object: nil)
     }
     
 }

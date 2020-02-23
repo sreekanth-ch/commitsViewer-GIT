@@ -10,7 +10,7 @@ import UIKit
 
 class DisplayCommitsTableViewController: UITableViewController {
     
-    var gitCommits: [Commit] = []
+    static var gitCommits: [Commit] = []
     
     override func viewDidLoad() {
         
@@ -23,6 +23,16 @@ class DisplayCommitsTableViewController: UITableViewController {
         guard let url = URL(string: urlString) else {return}
         
         urlSession.dataTask(with: url, completionHandler: ServiceRequest().fetchCommits).resume()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(DisplayCommitsTableViewController.updateTableWithFetchedData), name: NSNotification.Name(rawValue: "receivedCommitsData"), object: nil)
+    }
+    
+    @objc func updateTableWithFetchedData(notification: NSNotification) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.removeSpinner()
+        }
+        
     }
     
     // MARK: - Table view data source
@@ -33,20 +43,20 @@ class DisplayCommitsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return gitCommits.count
+        return DisplayCommitsTableViewController.gitCommits.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "individualCommitCell", for: indexPath) as! IndividualCommitTableViewCell
         
-        cell.commitNumberLabel.text = "CommitID: " + gitCommits[indexPath.row].commitID
+        cell.commitNumberLabel.text = "CommitID: " + DisplayCommitsTableViewController.gitCommits[indexPath.row].commitID
         
-        cell.commitMessageLabel.text = "Commit Message: " + gitCommits[indexPath.row].commitMessage
+        cell.commitMessageLabel.text = "Commit Message: " + DisplayCommitsTableViewController.gitCommits[indexPath.row].commitMessage
         
-        cell.imageAvatar.image = gitCommits[indexPath.row].userAvatar
+        cell.imageAvatar.image = DisplayCommitsTableViewController.gitCommits[indexPath.row].userAvatar
         
-        cell.userNameLabel.text = "Commited by: " + gitCommits[indexPath.row].userName
+        cell.userNameLabel.text = "Commited by: " + DisplayCommitsTableViewController.gitCommits[indexPath.row].userName
         
         return cell
     }

@@ -23,26 +23,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKP-od-zVG">
-                                            <rect key="frame" x="95" y="16" width="289" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="85" y="16" width="319" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CommitID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGd-nC-4Ja">
-                                            <rect key="frame" x="95" y="41.5" width="289" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CommitID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGd-nC-4Ja">
+                                            <rect key="frame" x="85" y="41.5" width="319" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNx-D2-bIz">
-                                            <rect key="frame" x="35" y="26" width="50" height="50"/>
+                                            <rect key="frame" x="25" y="26" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="Rcr-1T-uu1"/>
                                                 <constraint firstAttribute="height" constant="50" id="idt-1m-ujl"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CommitMessage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qi-cf-n3p">
-                                            <rect key="frame" x="93" y="70" width="129" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CommitMessage" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qi-cf-n3p">
+                                            <rect key="frame" x="83" y="70" width="301" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -50,22 +50,22 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="CGd-nC-4Ja" firstAttribute="top" secondItem="cKP-od-zVG" secondAttribute="bottom" constant="5" id="3t6-nU-2Gb"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="4qi-cf-n3p" secondAttribute="trailing" constant="172" id="ASD-Ce-HzE"/>
                                         <constraint firstItem="cNx-D2-bIz" firstAttribute="top" secondItem="xuj-yU-Zag" secondAttribute="topMargin" constant="15" id="CgA-5d-UYo"/>
-                                        <constraint firstItem="4qi-cf-n3p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xuj-yU-Zag" secondAttribute="leadingMargin" id="II8-mc-Izb"/>
                                         <constraint firstItem="4qi-cf-n3p" firstAttribute="top" secondItem="CGd-nC-4Ja" secondAttribute="bottom" constant="8" id="JiF-cP-FGQ"/>
                                         <constraint firstItem="cKP-od-zVG" firstAttribute="leading" secondItem="cNx-D2-bIz" secondAttribute="trailing" constant="10" id="P29-9D-axH"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="CGd-nC-4Ja" secondAttribute="trailing" constant="10" id="PyZ-n0-opE"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="cKP-od-zVG" secondAttribute="trailing" constant="10" id="WMz-NF-bSQ"/>
-                                        <constraint firstItem="cNx-D2-bIz" firstAttribute="leading" secondItem="xuj-yU-Zag" secondAttribute="leadingMargin" constant="15" id="a0M-fB-DzZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="cKP-od-zVG" secondAttribute="trailing" constant="10" id="ZKT-KX-SeC"/>
+                                        <constraint firstItem="cNx-D2-bIz" firstAttribute="leading" secondItem="xuj-yU-Zag" secondAttribute="leadingMargin" constant="5" id="a0M-fB-DzZ"/>
                                         <constraint firstItem="CGd-nC-4Ja" firstAttribute="leading" secondItem="cNx-D2-bIz" secondAttribute="trailing" constant="10" id="bTq-jY-HaV"/>
+                                        <constraint firstItem="4qi-cf-n3p" firstAttribute="leading" secondItem="cNx-D2-bIz" secondAttribute="trailing" constant="8" id="fMT-PQ-WaM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4qi-cf-n3p" secondAttribute="trailing" constant="10" id="fqL-v4-KEE"/>
                                         <constraint firstItem="cKP-od-zVG" firstAttribute="top" secondItem="xuj-yU-Zag" secondAttribute="topMargin" constant="5" id="hQZ-iq-ugq"/>
+                                        <constraint firstAttribute="trailing" secondItem="CGd-nC-4Ja" secondAttribute="trailing" constant="10" id="mmk-Ln-KBT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commitMessageLabel" destination="4qi-cf-n3p" id="Bou-Xa-wy3"/>
                                     <outlet property="commitNumberLabel" destination="CGd-nC-4Ja" id="S9W-wm-o46"/>
-                                    <outlet property="imageView" destination="cNx-D2-bIz" id="Kmm-QN-aVd"/>
+                                    <outlet property="imageAvatar" destination="cNx-D2-bIz" id="xze-ZO-Ulh"/>
                                     <outlet property="userNameLabel" destination="cKP-od-zVG" id="iLg-po-c0S"/>
                                 </connections>
                             </tableViewCell>
